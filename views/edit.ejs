@@ -1,0 +1,43 @@
+<center>
+    <h1>
+        EDIT BOOKS
+    </h1>
+    <form method="post" action="/update">
+        <input type="text" name="id" value="<%= data.id%>">
+        <table border="1">
+            <tr>
+                <td>Book_Name :-</td>
+                <td>
+                    <input type="text" name="book_name"value="<%= data.book_name%>" />
+                </td>
+            </tr>
+            <tr>
+                <td>Book_Price :-</td>
+                <td>
+                    <input type="number" name="book_price"value="<%= data.book_price%>" />
+                </td>
+            </tr>
+            <tr>
+                <td>Book_Pages :-</td>
+                <td>
+                    <input type="number" name="book_pages"value="<%= data.book_pages%>" />
+                </td>
+            </tr>
+            <tr>
+                <td>Book_Author :-</td>
+                <td>
+                    <input type="text" name="book_author "value="<%= data.book_author%>" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <a href="/">
+        view data
+    </a>
+</center>

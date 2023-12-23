@@ -1,0 +1,40 @@
+<center>
+    <h1>ALL BOOKS</h1>
+    <table border="1">
+        <tr>
+            <td>Book_Number</td>
+            <td>Book_Name</td>
+            <td>Book_Price</td>
+            <td>Book_Pages</td>
+            <td>Book_Author</td>
+            <td>Action</td>
+        </tr>
+        <%record.map((val,i)=>{i++%>
+            <tr>
+                <td>
+                    <%=i%>
+                </td>
+                <td>
+                    <%=val.book_name%>
+                </td>
+                <td>
+                    <%=val.book_price%>
+                </td>
+                <td>
+                    <%=val.book_pages%>
+                </td>
+                <td>
+                    <%=val.book_author%>
+                </td>
+                <td>
+                    <a href="/deleterecord?id=<%= val.id%>"> DELETE </a> || 
+                    <a href="/editrecord?id=<%= val.id%>"> EDIT </a>
+                </td>
+            </tr>
+            <%})%>
+    </table>
+    <br>
+    <a href="/form">
+        add data
+    </a>
+</center>
